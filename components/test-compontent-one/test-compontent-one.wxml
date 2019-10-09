@@ -1,0 +1,7 @@
+<!--pages/index/components/test-compontent-one/test-compontent-one.wxml-->
+<view class='inner' bind:tap="onTap">
+  <text>{{userInfo.nickName}}</text>
+  {{innerText}}
+  <slot name="before"></slot>
+  <slot name="after"></slot>
+</view>

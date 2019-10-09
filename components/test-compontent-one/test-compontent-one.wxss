@@ -1,0 +1,4 @@
+/* pages/index/components/test-compontent-one/test-compontent-one.wxss */
+.inner{
+  color: red;
+}
