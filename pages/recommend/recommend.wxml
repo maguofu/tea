@@ -1,2 +1,2 @@
 <!--pages/recommend/recommend.wxml-->
-<text>推荐页面</text>
+<view class='title'>推荐页面</view>

@@ -27,7 +27,7 @@
       },
       {
         "iconPath": "assets/img/tea.png",
-        "selectedPath": "assets/img/tea.png",
+        "selectedIconPath": "assets/img/tea.png",
         "pagePath": "pages/tea/tea",
         "text": "茶"
       },
@@ -41,7 +41,7 @@
       },
       {
         "iconPath": "assets/img/advisory.png",
-        "selectedPath": "assets/img/advisory.png",
+        "selectedIconPath": "assets/img/advisory.png",
         "pagePath": "pages/contact/contact",
         "text": "咨询"
       }
