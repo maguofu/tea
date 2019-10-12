@@ -1,5 +1,5 @@
 // pages/recommend/recommend.js
-import http from '../../utils/api.js';
+import https from '../../utils/api.js';
 
 Page({
 
@@ -7,64 +7,72 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    fetchDataList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad(options) {
+    https('/study/mock/test2', {
+      params: {
+        a: 'sfa'
+      }
+    }).then((res) => {
+      console.log(res);
+      this.setData({fetchDataList: res.data.list})
+    });
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow() {
     
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    // http('/study/mock/test', {}).then((res) => {
-    //   console.log(res);
-    // });
+  onReady () {
+    
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-
+  onHide () {
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
+  onUnload () {
+    
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
+  onPullDownRefresh () {
+    
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage () {
 
+  },
+  gotoDetail() {
+    console.log(wx.getSystemInfoSync().windowWidth)
   }
 })

@@ -1,2 +1,4 @@
 <!--pages/recommend/recommend.wxml-->
-<view class='title'>推荐页面</view>
+<view class='title' bindtap="gotoDetail">推荐页面</view>
+<view wx:for="{{fetchDataList}}" wx:for-index="index"
+  wx:key="index" wx:if="{{index >= 2}}">{{index}}-{{item}}</view>

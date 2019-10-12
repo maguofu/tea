@@ -1,6 +1,6 @@
 
 
-const baseUrl = 'https://127.0.0.1:70';
+const baseUrl = 'https://www.maguofu.com';
 export default (api, data) => {
   return new Promise((resolve, reject) => {
     wx.request({
@@ -13,7 +13,7 @@ export default (api, data) => {
         },
       method: data.method || "GET",
       success: (res) => {
-        resolve(res);
+        resolve(res.data);
       },
       fail: (e) => {
         reject(e);
