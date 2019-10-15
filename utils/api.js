@@ -1,6 +1,6 @@
 
 
-const baseUrl = 'https://www.maguofu.com';
+const baseUrl = 'https://www.greenteaxinyang.com';
 export default (api, data) => {
   return new Promise((resolve, reject) => {
     wx.request({

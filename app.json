@@ -4,7 +4,8 @@
     "pages/tea/tea",
     "pages/contact/contact",
     "pages/add/add",
-    "pages/agricultural-vice/agricultural-vice"
+    "pages/agricultural-vice/agricultural-vice",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "dark",

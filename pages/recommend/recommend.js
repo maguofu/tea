@@ -73,6 +73,9 @@ Page({
 
   },
   gotoDetail() {
+    wx.navigateTo({
+      url: '/pages/detail/detail'
+    })
     console.log(wx.getSystemInfoSync().windowWidth)
   }
 })

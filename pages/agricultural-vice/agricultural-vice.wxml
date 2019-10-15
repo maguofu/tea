@@ -1,2 +1,3 @@
 <!--pages/agricultural-vice/agricultural-vice.wxml-->
+<app-top-bar />
 <text>周边农副产品页面</text>

@@ -1,2 +1,3 @@
 <!--pages/add/add.wxml-->
+<app-top-bar />
 <text>用户添加作品页面</text>
