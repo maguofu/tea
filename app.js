@@ -10,7 +10,7 @@ App({
       // bar的背景色
       backgroundColor: '#fff',
       // bar上边框颜色
-      borderStyle: 'black',
+      borderStyle: 'white',
       fontSize: '48rpx'
     });
   },

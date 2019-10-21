@@ -1,18 +1,27 @@
 // pages/detail/detail.js
+import https from '../../utils/api.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    // url上的商品id
+    goodsId: 0,
+    // 请求出错
+    fetchErr: false,
+    // 显示重试按钮
+    hasButton: true,
+    // 请求的详情数据
+    detailList: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({ goodsId: Number(options.goodsId) });
+    this.fetchGoodDetail();
   },
 
   /**
@@ -62,5 +71,24 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  fetchGoodDetail() {
+    https('/study/mock/detail', {
+      params: {
+        id: this.data.goodsId,
+        _t: Date.parse(new Date())
+      }
+    }).then((res) => {
+      if (!res.errNo) {
+        this.setData({ detailList: res.data.detailList });
+      } else {
+        this.setData({ fetchErr: true });
+      }
+    }).catch(e => {
+      this.setData({ fetchErr: true });
+    });
+  },
+  retryFetchData() {
+    this.fetchGoodDetail();
   }
 })

@@ -1,0 +1,3 @@
+<!--components/error2/error.wxml-->
+<image src='/assets/img/err.jpg' class='err-icon'></image>
+<text class='retry' bindtap="reTry" wx:if="{{hasButton}}">{{btnText}}</text>

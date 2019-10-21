@@ -1,7 +1,16 @@
 <!--pages/recommend/recommend.wxml-->
-<app-top-bar />
+<!-- <app-top-bar /> -->
+<block wx:if="!fetchErr">
+  <view class='page-view'>
+    <view class='page-title {{fetchErr ? "hide" : ""}}'>您的专属推荐~</view>
+    <view wx:for="{{recommondList}}" wx:for-index="index"
+      wx:key="index" bindtap="gotoDetail"
+      class='des-container' data-id="{{item.id}}">
+      <image src="{{item.img}}" class='img' />
+      <view class='des-content'>[#{{item.id}}]{{item.content}}</view>
+    </view>
+  </view>
+</block>
 
-
-<view class='title' bindtap="gotoDetail">推荐页面</view>
-<view wx:for="{{fetchDataList}}" wx:for-index="index"
-  wx:key="index" wx:if="{{index >= 2}}">{{index}}-{{item}}</view>
+<error wx:if="{{fetchErr}}" bind:retryFetch="retryFetchData"
+  hasButton="{{hasButton}}" btnText="{{errBtnText}}" />

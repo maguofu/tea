@@ -1,1 +1,28 @@
 /* pages/detail/detail.wxss */
+
+.good-id{
+  color: #333;
+  font-size: 28rpx;
+  padding: 30rpx 0;
+  display: block;
+}
+.main-container{
+  padding: 0 20rpx;
+}
+.detail-item{
+  margin-bottom: 20rpx;
+}
+.detail-img{
+  width: 100%;
+  display: block;
+  border-radius: 10rpx;
+}
+.detail-content{
+  font-size: 24rpx;
+  color: #999;
+  text-indent: 2em;
+  padding: 10rpx 0;
+}
+.last-one{
+  margin-bottom: 100rpx;
+}

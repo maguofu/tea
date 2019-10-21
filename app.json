@@ -5,7 +5,8 @@
     "pages/contact/contact",
     "pages/add/add",
     "pages/agricultural-vice/agricultural-vice",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "components/error/error"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -7,21 +7,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    fetchDataList: []
+    // 请求推荐数据
+    recommondList: [],
+    // 请求是否出错
+    fetchErr: false,
+    // 请求异常页面是否有重试按钮
+    hasButton: true,
+    // 异常按钮文案
+    errBtnText: '请求出错，请重试',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    https('/study/mock/test2', {
-      params: {
-        a: 'sfa'
-      }
-    }).then((res) => {
-      console.log(res);
-      this.setData({fetchDataList: res.data.list})
-    });
+    this.fetchData();
   },
 
   /**
@@ -72,10 +72,32 @@ Page({
   onShareAppMessage () {
 
   },
-  gotoDetail() {
+  // 获取首页数据
+  fetchData() {
+    https('/study/mock/tea-index', {
+      params: {
+        _t: Date.parse(new Date())
+      }
+    }).then((res) => {
+      if (!res.errNo) {
+        this.setData({ recommondList: res.data.recommondList });
+      } else {
+        this.setData({ fetchErr: true });
+      }
+    }).catch(e => {
+      this.setData({ fetchErr: true });
+    });
+  },
+  /**
+   * 进入详情页
+   */
+  gotoDetail(e) {
     wx.navigateTo({
-      url: '/pages/detail/detail'
+      url: '/pages/detail/detail?goodsId=' + e.currentTarget.dataset.id
     })
-    console.log(wx.getSystemInfoSync().windowWidth)
+  },
+  // 页面请求异常重试按钮
+  retryFetchData() {
+    this.fetchData();
   }
 })

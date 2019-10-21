@@ -1,2 +1,14 @@
 <!--pages/detail/detail.wxml-->
-<view class='detail-page'>详情页面</view>
+
+<error wx:if="{{fetchErr}}" bind:retryFetch="retryFetchData"
+  hasButton="{{hasButton}}" btnText="请求出错，请重试" />
+<block wx:if="{{!fetchErr}}">
+  <view class="main-container">
+    <text class='good-id'>[#{{goodsId}}]详情</text>
+    <view wx:for="{{detailList}}" wx:index="{{index}}" :key="index"
+      class='detail-item {{index === detailList.length - 1 ? "last-one" : ""}}'>
+      <image src="{{item.url}}" class='detail-img' />
+      <view class='detail-content'>{{item.content}}</view>
+    </view>
+  </view>
+</block>

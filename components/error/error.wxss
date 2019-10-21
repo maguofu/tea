@@ -1,0 +1,23 @@
+/* components/error2/error.wxss */
+
+.err-icon{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -50rpx;
+  top: 30%;
+}
+.retry{
+  display: inline-block;
+  padding: 20rpx 60rpx;
+  position: fixed;
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #ccc;
+}
