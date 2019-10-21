@@ -1,6 +1,6 @@
 
 
-const baseUrl = 'https://www.greenteaxinyang.com';
+const baseUrl = 'http://www.greenteaxinyang.com:70';
 export default (api, data) => {
   return new Promise((resolve, reject) => {
     wx.request({

@@ -80,6 +80,7 @@ Page({
       }
     }).then((res) => {
       if (!res.errNo) {
+        this.setData({ fetchErr: false });
         this.setData({ recommondList: res.data.recommondList });
       } else {
         this.setData({ fetchErr: true });

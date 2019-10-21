@@ -80,6 +80,7 @@ Page({
       }
     }).then((res) => {
       if (!res.errNo) {
+        this.setData({ fetchErr: false });
         this.setData({ detailList: res.data.detailList });
       } else {
         this.setData({ fetchErr: true });
