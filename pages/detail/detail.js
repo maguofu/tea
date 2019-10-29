@@ -8,12 +8,16 @@ Page({
   data: {
     // url上的商品id
     goodsId: 0,
+    // 商品明
+    name: '',
     // 请求出错
     fetchErr: false,
     // 显示重试按钮
     hasButton: true,
     // 请求的详情数据
     detailList: [],
+    // 详情描述
+    description: '',
   },
 
   /**
@@ -21,6 +25,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({ goodsId: Number(options.goodsId) });
+    this.setData({ name: options.name });
     this.fetchGoodDetail();
   },
 
@@ -82,6 +87,7 @@ Page({
       if (!res.errNo) {
         this.setData({ fetchErr: false });
         this.setData({ detailList: res.data.detailList });
+        this.setData({ description: res.data.description });
       } else {
         this.setData({ fetchErr: true });
       }

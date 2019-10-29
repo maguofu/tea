@@ -94,7 +94,7 @@ Page({
    */
   gotoDetail(e) {
     wx.navigateTo({
-      url: '/pages/detail/detail?goodsId=' + e.currentTarget.dataset.id
+      url: `/pages/detail/detail?goodsId=${e.currentTarget.dataset.id}&name=${e.currentTarget.dataset.name}`
     })
   },
   // 页面请求异常重试按钮

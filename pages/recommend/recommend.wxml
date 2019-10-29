@@ -5,9 +5,9 @@
     <view class='page-title {{fetchErr ? "hide" : ""}}'>您的专属推荐~</view>
     <view wx:for="{{recommondList}}" wx:for-index="index"
       wx:key="index" bindtap="gotoDetail"
-      class='des-container' data-id="{{item.id}}">
+      class='des-container' data-id="{{item.id}}" data-name="{{item.name}}">
       <image src="{{item.img}}" class='img' />
-      <view class='des-content'>[#{{item.id}}]{{item.content}}</view>
+      <view class='des-content'>[{{item.name}}#{{item.id}}]{{item.content}}</view>
     </view>
   </view>
 </block>
