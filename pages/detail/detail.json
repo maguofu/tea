@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "error": "/components/error/error"
+    "error": "/components/error/error",
+    "contact": "/components/contact/contact"
   }
 }

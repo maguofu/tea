@@ -1,0 +1,8 @@
+<!--components/contact/contact.wxml-->
+
+<view class='wx-icon link-icon'>
+  <image class='img' src='../../assets/img/wx-icon.jpg'></image>
+</view>
+<view class='qq-icon link-icon'>
+  <image class='img' src='../../assets/img/qq-icon.jpg'></image>
+</view>

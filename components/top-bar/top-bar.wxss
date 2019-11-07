@@ -1,8 +1,0 @@
-/* components/top-bar.wxss */
-.app-top-bar{
-  height: 160rpx;
-  line-height: 160rpx;
-  color: #333;
-  font-size: 40rpx;
-  text-align: center;
-}

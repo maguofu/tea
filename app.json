@@ -2,11 +2,8 @@
   "pages": [
     "pages/recommend/recommend",
     "pages/tea/tea",
-    "pages/contact/contact",
-    "pages/add/add",
     "pages/agricultural-vice/agricultural-vice",
-    "pages/detail/detail",
-    "components/error/error"
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -34,18 +31,8 @@
         "text": "茶"
       },
       {
-        "pagePath": "pages/add/add",
-        "text": "+"
-      },
-      {
         "pagePath": "pages/agricultural-vice/agricultural-vice",
         "text": "农副"
-      },
-      {
-        "iconPath": "assets/img/advisory.png",
-        "selectedIconPath": "assets/img/advisory.png",
-        "pagePath": "pages/contact/contact",
-        "text": "咨询"
       }
     ]
   }

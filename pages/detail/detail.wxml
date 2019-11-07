@@ -2,10 +2,11 @@
 
 <error wx:if="{{fetchErr}}" bind:retryFetch="retryFetchData"
   hasButton="{{hasButton}}" btnText="请求出错，请重试" />
+<contact />
 <block wx:if="{{!fetchErr}}">
   <view class="main-container">
     <text class='good-id'>[{{name}}#{{goodsId}}]详情</text>
-    <view wx:for="{{detailList}}" wx:index="{{index}}" :key="index"
+    <view wx:for="{{detailList}}" wx:index="{{index}}" wx:key="index"
       class='detail-item {{index === detailList.length - 1 ? "last-one" : ""}}'>
       <image src="{{item}}" class='detail-img' />
     </view>

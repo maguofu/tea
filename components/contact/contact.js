@@ -1,4 +1,4 @@
-// components/top-bar.js
+// components/contact/contact.js
 Component({
   /**
    * 组件的属性列表
